@@ -15,7 +15,7 @@ public void testNumIslands_case1() {
     };
     Solution8 solution = new Solution8();
     int result = solution.numIslands(grid);
-    assertEquals(2, result); // 错误的预期值，实际输出为1
+    assertEquals(5, result); // 错误的预期值，实际输出为1
 }
 
 @Test
