@@ -10,7 +10,7 @@ jobs:
         uses: actions/setup-java@v3
         with:
           java-version: 22
-          distribution: 'adoptium'
+          distribution: 'openjdk'
       - name: Cache Maven packages
         uses: actions/cache@v2
         with:
