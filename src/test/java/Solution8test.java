@@ -1,6 +1,5 @@
-import edu.hit.Solution8;
-import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
 
 public class Solution8test {
     // 测试用例设计的总体原则：等价类划分原则，即对于输入的每个可能值，都设计一个测试用例来验证其正确性。
