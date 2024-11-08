@@ -1,4 +1,4 @@
-name: tests and merge PR
+name: tests
 
 on:
   push:
