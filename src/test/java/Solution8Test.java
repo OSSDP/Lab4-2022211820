@@ -23,7 +23,7 @@ public class Solution8Test {
                 {'0', '0', '0', '0', '0'}
         };
         int result = solution.numIslands(grid);
-        assertEquals(2, result); // 预期输出为1
+        assertEquals(1, result); // 预期输出为1
     }
 
     @Test
@@ -36,7 +36,7 @@ public class Solution8Test {
                 {'0', '0', '0', '1', '1'}
         };
         int result = solution.numIslands(grid);
-        assertEquals(1, result); // 预期输出为3
+        assertEquals(3, result); // 预期输出为3
     }
 
     @Test
@@ -49,7 +49,7 @@ public class Solution8Test {
                 {'0', '0', '0', '0'}
         };
         int result = solution.numIslands(grid);
-        assertEquals(2, result); // 预期输出为0，网格中没有陆地
+        assertEquals(0, result); // 预期输出为0，网格中没有陆地
     }
 
     @Test
