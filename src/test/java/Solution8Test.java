@@ -40,7 +40,7 @@ public class Solution8Test {
     }
 
     @Test
-    public void testNumIslands_case4() {
+    public void testNumIslands_case3() {
         // 测试目的：验证只有水域的情况
         char[][] grid = {
                 {'0', '0', '0', '0'},
@@ -53,7 +53,7 @@ public class Solution8Test {
     }
 
     @Test
-    public void testNumIslands_case5() {
+    public void testNumIslands_case4() {
         // 测试目的：验证只有陆地的情况
         char[][] grid = {
                 {'1', '1', '1', '1'},
@@ -66,7 +66,7 @@ public class Solution8Test {
     }
 
     @Test
-    public void testNumIslands_case6() {
+    public void testNumIslands_case5() {
         // 测试目的：验证只有一个陆地块的情况
         char[][] grid = {
                 {'1', '0', '0', '0'},
