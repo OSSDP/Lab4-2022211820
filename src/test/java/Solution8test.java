@@ -1,4 +1,5 @@
 import org.junit.Test;
+import edu.hit.Solution8;
 import static org.junit.Assert.assertEquals;
 
 public class Solution8test {
