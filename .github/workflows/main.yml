@@ -33,15 +33,7 @@ jobs:
     needs: run_tests 
 
     steps:
-      - name: Checkout the repository
-        uses: actions/checkout@v2
-
-      - name: Debug PR number
-        run: echo "Pull Request Number: ${{ github.event.pull_request.number }}"
-
       - name: Enable PR Auto Merge
         uses: peter-evans/enable-pull-request-automerge@v2
         with:
-          token: ${{ secrets.GITHUB_TOKEN }} 
-          pull-request-number: ${{ github.event.pull_request.number }}  
-          merge-method: merge 
+          github_token: ${{ secrets.GITHUB_TOKEN }}
