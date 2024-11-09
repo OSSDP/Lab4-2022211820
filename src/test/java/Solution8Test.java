@@ -78,3 +78,4 @@ public class Solution8Test {
         assertEquals(1, result); // 预期输出为1，只有一个岛屿
     }
 }
+
