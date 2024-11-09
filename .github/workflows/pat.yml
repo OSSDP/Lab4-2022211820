@@ -1,0 +1,46 @@
+permissions: write-all
+name: Automerge
+
+on:
+  pull_request:
+    types:
+      - labeled
+      - unlabeled
+      - synchronize
+      - opened
+      - edited
+      - ready_for_review
+      - reopened
+      - unlocked
+  pull_request_review:
+    types:
+      - submitted
+  check_suite:
+    types:
+      - completed  # 当测试工作流完成后触发
+
+jobs:
+  automerge:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Automerge
+        uses: "pascalgn/automerge-action@629929da409181990e4e638dcf84a74e11d3af66"
+        env:
+          GITHUB_TOKEN: "${{ secrets.PAT1 }}"  # 使用自定义 PAT 替代默认 GITHUB_TOKEN
+          MERGE_LABELS: "automerge,!work in progress"
+          MERGE_METHOD: "squash"
+          MERGE_COMMIT_MESSAGE: "pull-request-title"
+
+      - name: Trigger tests workflow via GitHub API
+        uses: actions/github-script@v5
+        with:
+          script: |
+            await github.rest.actions.createWorkflowDispatch({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              workflow_id: 'main.yml',
+              ref: 'main'
+            });
